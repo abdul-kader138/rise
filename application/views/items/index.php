@@ -28,5 +28,6 @@
             printColumns: [0, 1, 2, 3],
             xlsColumns: [0, 1, 2, 3]
         });
-    });
+    })
+
 </script>
