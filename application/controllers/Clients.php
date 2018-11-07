@@ -51,6 +51,7 @@ class Clients extends MY_Controller {
         $view_data["custom_fields"] = $this->Custom_fields_model->get_combined_details("clients", $client_id, $this->login_user->is_admin, $this->login_user->user_type)->result();
 
         $this->load->view('clients/modal_form', $view_data);
+
     }
 
     private function _get_groups_dropdown_select2_data($show_header = false) {
