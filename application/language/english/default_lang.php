@@ -1143,3 +1143,9 @@ $lang["favourite_restaurant"] = "Favourite Restaurant";
 $lang["other_favourites"] = "Other Favourites";
 $lang["dreams"] = "Dreams";
 $lang["other_real_estate"] = "Other Real Estate";
+
+
+$lang["customer_event"] = "Customer Upcoming Event";
+
+$lang["event_customers"] = "Clients Events";
+$lang["client_event_calendar"] = "Clients Event calendar";

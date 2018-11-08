@@ -31,7 +31,7 @@
                 if (get_setting("module_event") == "1") {
                     $sidebar_menu[] = array("name" => "events", "url" => "events", "class" => "fa-calendar");
                 }
-
+                $sidebar_menu[] = array("name" => "event_customers", "url" => "clients_events", "class" => "fa-calendar");
                 if (get_setting("module_note") == "1") {
                     $sidebar_menu[] = array("name" => "notes", "url" => "notes", "class" => "fa-book font-16");
                 }
@@ -188,6 +188,7 @@
                 if ($this->login_user->is_admin) {
                     $sidebar_menu[] = array("name" => "settings", "url" => "settings/general", "class" => "fa-wrench");
                 }
+
             } else {
                 //client menu
                 //get the array of hidden menu
