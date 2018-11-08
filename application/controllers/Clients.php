@@ -85,7 +85,8 @@ class Clients extends MY_Controller {
 
         validate_submitted_data(array(
             "id" => "numeric",
-            "company_name" => "required"
+            "company_name" => "required",
+//            "client_name" => "required"
         ));
 
         $data = array(
@@ -97,7 +98,27 @@ class Clients extends MY_Controller {
             "country" => $this->input->post('country'),
             "phone" => $this->input->post('phone'),
             "website" => $this->input->post('website'),
-            "vat_number" => $this->input->post('vat_number')
+            "vat_number" => $this->input->post('vat_number'),
+            "client_name" => $this->input->post('client_name'),
+            "date_of_birth" => $this->input->post('date_of_birth'),
+            "client_mobile" => $this->input->post('client_mobile'),
+            "client_occupation" => $this->input->post('client_occupation'),
+            "spouse_name" => $this->input->post('spouse_name'),
+            "spouse_occupation" => $this->input->post('spouse_occupation'),
+            "date_of_birth_spouse" => $this->input->post('date_of_birth_spouse'),
+            "spouse_mobile" => $this->input->post('spouse_mobile'),
+            "date_of_birth_kid" => $this->input->post('date_of_birth_kid'),
+            "kid_name" => $this->input->post('kid_name'),
+            "home_phone" => $this->input->post('home_phone'),
+            "email_address" => $this->input->post('email_address'),
+            "date_of_anniversary" => $this->input->post('date_of_anniversary'),
+            "facebook" => $this->input->post('facebook'),
+            "hobbies" => $this->input->post('hobbies'),
+            "sports_teams" => $this->input->post('sports_teams'),
+            "favourite_restaurant" => $this->input->post('favourite_restaurant'),
+            "other_favourites" => $this->input->post('other_favourites'),
+            "dreams" => $this->input->post('dreams'),
+            "other_real_estate" => $this->input->post('other_real_estate'),
         );
 
         if ($this->login_user->user_type === "staff") {
@@ -207,6 +228,8 @@ class Clients extends MY_Controller {
 
         $row_data = array($data->id,
             anchor(get_uri("clients/view/" . $data->id), $data->company_name),
+            $data->client_name ? $data->client_name : "",
+            $data->date_of_birth ? $data->date_of_birth : "",
             $data->primary_contact ? $primary_contact : "",
             $group_list,
             to_decimal_format($data->total_projects),

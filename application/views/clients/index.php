@@ -28,6 +28,8 @@
             columns: [
                 {title: "<?php echo lang("id") ?>", "class": "text-center w50"},
                 {title: "<?php echo lang("company_name") ?>"},
+                {title: "<?php echo lang("client_name") ?>"},
+                {title: "<?php echo lang("date_of_birth") ?>"},
                 {title: "<?php echo lang("primary_contact") ?>"},
                 {title: "<?php echo lang("client_groups") ?>"},
                 {title: "<?php echo lang("projects") ?>"},                
@@ -37,8 +39,8 @@
                 <?php echo $custom_field_headers; ?>,
                 {title: '<i class="fa fa-bars"></i>', "class": "text-center option w100"}
             ],
-            printColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6], '<?php echo $custom_field_headers; ?>'),
-            xlsColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6], '<?php echo $custom_field_headers; ?>')
+            printColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6,7,8], '<?php echo $custom_field_headers; ?>'),
+            xlsColumns: combineCustomFieldsColumns([0, 1, 2, 3, 4, 5, 6,7,8], '<?php echo $custom_field_headers; ?>')
         });
     });
 </script>
